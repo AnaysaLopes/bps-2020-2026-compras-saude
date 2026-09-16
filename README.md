@@ -777,7 +777,7 @@ bps-2020-2026-compras-saude/
 | 1 | Base consolidada 2020–2026 | ✅ 367.365 registros — publicada como Release do repositório (ver seção 12) |
 | 2 | Dashboard no Looker Studio | ✅ publicado, com 6 KPIs, 8 visuais e 6 filtros, em 2 páginas — [link](https://datastudio.google.com/reporting/f914acb0-3cbe-4566-a37c-c40fe9da1ac8) |
 | 3 | README.md documentado | ✅ este arquivo |
-| 4 | Publicação no GitHub | ⬜ a publicar |
+| 4 | Publicação no GitHub | ✅ [repositório publicado](https://github.com/AnaysaLopes/bps-2020-2026-compras-saude), com branches e commits por funcionalidade |
 
 O link do dashboard está na seção [8](#8-dashboard).
 
