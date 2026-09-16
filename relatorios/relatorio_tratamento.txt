@@ -1,0 +1,93 @@
+==========================================================================
+SPRINT 2 - TRATAMENTO, PREPARAÇÃO E CONCATENAÇÃO
+Aluna: Anaysa Pereira Lopes
+==========================================================================
+
+--- 2020 ---
+    lido da camada raw: 84.919 linhas
+    encoding: 1876 valores corrigidos em 'nu_processo_compra'
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 84919 -> 84919
+    gravado: BPS_2020_tratado.csv
+
+--- 2021 ---
+    lido da camada raw: 85.012 linhas
+    encoding: 1955 valores corrigidos em 'nu_processo_compra'
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 85012 -> 85012
+    gravado: BPS_2021_tratado.csv
+
+--- 2022 ---
+    lido da camada raw: 89.546 linhas
+    encoding: 2742 valores corrigidos em 'nu_processo_compra'
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 89546 -> 89546
+    gravado: BPS_2022_tratado.csv
+
+--- 2023 ---
+    lido da camada raw: 33.809 linhas
+    encoding: 756 valores corrigidos em 'nu_processo_compra'
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 33809 -> 33809
+    gravado: BPS_2023_tratado.csv
+
+--- 2024 ---
+    lido da camada raw: 28.815 linhas
+    encoding: nada a corrigir
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 28815 -> 28815
+    gravado: BPS_2024_tratado.csv
+
+--- 2025 ---
+    lido da camada raw: 34.174 linhas
+    encoding: nada a corrigir
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 34174 -> 34174
+    gravado: BPS_2025_tratado.csv
+
+--- 2026 ---
+    lido da camada raw: 11.090 linhas
+    encoding: nada a corrigir
+    duplicidades: linha inteira=0 | cd_seq_bps repetido=0
+    linhas: 11090 -> 11090
+    gravado: BPS_2026_tratado.csv
+
+==========================================================================
+CONCATENAÇÃO DAS SETE BASES ANUAIS
+==========================================================================
+  Conferência OK: 7 anos com as mesmas 43 colunas.
+  Base consolidada: 367.365 linhas
+  Soma das partes .: 367.365 linhas
+  Perda no append .: 0 linhas
+  cd_seq_bps repetido entre anos: 0
+
+  Faixas de alerta de preço:
+    1 - Muito acima (>=5x)       10.000 ( 2.72%)
+    2 - Acima (2x a 5x)          27.737 ( 7.55%)
+    3 - Faixa esperada          296.013 (80.58%)
+    4 - Abaixo (<=0,5x)          19.101 ( 5.20%)
+    5 - Sem comparacao           14.514 ( 3.95%)
+
+==========================================================================
+CAMADA CURATED
+==========================================================================
+  Arquivo ....: BPS_20_26_AnaysaPereiraLopes.csv
+  Tamanho ....: 229.34 MB
+  Linhas .....: 367.365
+  Colunas ....: 41
+  Compactado .: BPS_20_26_AnaysaPereiraLopes.csv.gz (33.59 MB, -85.4%)
+
+==========================================================================
+QUADRO DE CONTROLE DA CARGA
+==========================================================================
+  ANO            RAW     STAGING   DESCARTADAS
+  2020        84.919      84.919             0
+  2021        85.012      85.012             0
+  2022        89.546      89.546             0
+  2023        33.809      33.809             0
+  2024        28.815      28.815             0
+  2025        34.174      34.174             0
+  2026        11.090      11.090             0
+  TOTAL      367.365     367.365             0
+
+  CURATED: 367.365 linhas

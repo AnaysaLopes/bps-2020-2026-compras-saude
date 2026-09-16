@@ -1,0 +1,251 @@
+==========================================================================
+SPRINT 3 e 5 - KPIS, VALIDAÇÃO E ANÁLISE DOS RESULTADOS
+Base: BPS consolidado 2020-2026 | Aluna: Anaysa Pereira Lopes
+==========================================================================
+
+1. KPIS OBRIGATÓRIOS - REFERÊNCIA PARA CONFERIR O DASHBOARD
+--------------------------------------------------------------------------
+(sem filtro aplicado)
+
+  1. Valor total registrado                         R$ 115.065.133.095,85
+  2. Quantidade total de itens comprados                   64.809.574.232
+  3. Número de registros de compra                                367.365
+  4. Instituições compradoras (distintas)                             854
+  5. Fornecedores (distintos)                                       3.668
+  6. Preço unitário médio ponderado                               R$ 1,78
+
+
+2. VALIDAÇÃO DAS FÓRMULAS
+--------------------------------------------------------------------------
+
+  2.1. Preço unitário médio: ponderado x média simples
+     Ponderado (SUM valor / SUM quantidade) ..: R$ 1,78
+     Média simples ...........................: R$ 172,65
+     Mediana .................................: R$ 1,86
+     Razão entre média simples e ponderada ...: 97x
+     A média simples pesa igualmente uma compra de 1 unidade e uma de
+     90 milhões. O KPI oficial usa a fórmula ponderada.
+
+  2.2. Soma de preço unitário
+     SUM(vl_preco_unitario) = R$ 63.425.146,47
+     Grandeza sem significado: soma preços de comprimido, ampola e frasco
+     de anos distintos. Não utilizada no dashboard.
+
+  2.3. Integridade do valor total
+     vl_preco_total != preço x quantidade: 0 registros
+
+  2.4. Contagem distinta: CNPJ x nome
+     Instituições por CNPJ ...: 854
+     Instituições por nome ...: 684
+     Fornecedores por CNPJ ...: 3.668
+     Fornecedores por nome ...: 3.451
+     Mesmo CNPJ com grafias diferentes de nome. Chave adotada: CNPJ.
+
+
+3. EVOLUÇÃO ANUAL
+--------------------------------------------------------------------------
+
+  ANO              VALOR TOTAL     VAR %   REGISTROS   INSTIT.
+  2020     R$ 5.047.158.170,44         -      84.919       483
+  2021     R$ 7.423.162.974,79    +47.1%      85.012       479
+  2022    R$ 16.872.571.679,23   +127.3%      89.546       421
+  2023     R$ 4.957.467.694,26    -70.6%      33.809       280
+  2024     R$ 9.089.049.191,82    +83.3%      28.815       241
+  2025    R$ 50.904.299.036,20   +460.1%      34.174       215
+  2026    R$ 20.771.424.349,11    -59.2%      11.090       100
+
+
+4. CONCENTRAÇÃO DO VALOR
+--------------------------------------------------------------------------
+  Os     10 maiores registros =  54.6% do valor total (R$ 62.864.115.976,00)
+  Os    100 maiores registros =  67.4% do valor total (R$ 77.525.874.156,40)
+  Os  1.000 maiores registros =  82.7% do valor total (R$ 95.176.791.167,70)
+  Os 10.000 maiores registros =  94.3% do valor total (R$ 108.486.695.848,18)
+
+  Total de registros na base: 367.365
+
+  Dez maiores registros por valor total:
+     1. 2025 | PR | PENICILAMINA               | unit.      R$ 294.400,00 | R$ 22.816.000.000,00
+        índice vs mediana do item: 10257.84
+     2. 2025 | SP | OCTREOTIDA                 | unit.      R$ 520.000,00 | R$ 14.591.200.000,00
+        índice vs mediana do item: 12189.405
+     3. 2026 | PR | AMOXICILINA                | unit.       R$ 51.038,16 | R$ 13.351.582.656,00
+        índice vs mediana do item: 260398.776
+     4. 2025 | SP | ÁCIDO ZOLEDRÔNICO          | unit.      R$ 199.000,00 |  R$ 3.712.743.000,00
+        índice vs mediana do item: 902.679
+     5. 2026 | RS | INSULINA                   | unit.       R$ 45.715,00 |  R$ 2.889.188.000,00
+        índice vs mediana do item: 2208.988
+     6. 2024 | RJ | TEZEPELUMABE               | unit.    R$ 8.191.720,00 |  R$ 1.662.919.160,00
+        índice vs mediana do item: 1054.48
+     7. 2023 | RJ | CARFILZOMIB                | unit.    R$ 4.804.290,00 |  R$ 1.364.418.360,00
+        índice vs mediana do item: 1056.002
+     8. 2024 | SP | BUDESONIDA                 | unit.       R$ 23.980,00 |    R$ 959.200.000,00
+        índice vs mediana do item: 1090.0
+     9. 2026 | RS | CARBONATO DE CÁLCIO        | unit.    R$ 1.149.000,00 |    R$ 803.151.000,00
+        índice vs mediana do item: 14362500.0
+    10. 2024 | RJ | AXITINIBE                  | unit.      R$ 253.090,00 |    R$ 713.713.800,00
+        índice vs mediana do item: 925.456
+
+
+5. DISPERSÃO DE PREÇOS - OPORTUNIDADES DE INVESTIGAÇÃO
+--------------------------------------------------------------------------
+
+  Diferença de preço não comprova sobrepreço nem irregularidade.
+
+    1 - Muito acima (>=5x)       10.000 registros ( 2.72%)    57.7% do valor
+    2 - Acima (2x a 5x)          27.737 registros ( 7.55%)     1.6% do valor
+    3 - Faixa esperada          296.013 registros (80.58%)    35.9% do valor
+    4 - Abaixo (<=0,5x)          19.101 registros ( 5.20%)     3.8% do valor
+    5 - Sem comparacao           14.514 registros ( 3.95%)     1.1% do valor
+
+  Itens com maior dispersão (mín. 30 registros comparáveis):
+    CARBONATO DE CÁLCIO                    (COMPRIMIDO) - 937 registros
+      mín        R$ 0,00 | mediana        R$ 0,09 | máx    R$ 1.149.000,00  (13.131.429x)
+    AMOXICILINA                            (CÁPSULA) - 846 registros
+      mín        R$ 0,00 | mediana        R$ 0,20 | máx       R$ 51.038,16  (255.191x)
+    PAROXETINA CLORIDRATO                  (COMPRIMIDO) - 760 registros
+      mín        R$ 0,11 | mediana        R$ 0,26 | máx        R$ 8.000,00  (30.769x)
+    BUDESONIDA                             (CÁPSULA) - 63 registros
+      mín        R$ 0,37 | mediana        R$ 0,73 | máx       R$ 20.089,24  (27.516x)
+    OXIBUTININA CLORIDRATO                 (COMPRIMIDO) - 265 registros
+      mín        R$ 0,22 | mediana        R$ 0,78 | máx       R$ 20.000,00  (25.641x)
+    REAGENTE PARA DIAGNÓSTICO CLÍNICO 5    (UNIDADE) - 293 registros
+      mín        R$ 0,20 | mediana        R$ 0,80 | máx       R$ 15.900,00  (19.875x)
+    ESCOPOLAMINA BUTILBROMETO              (COMPRIMIDO) - 852 registros
+      mín        R$ 0,01 | mediana        R$ 0,45 | máx        R$ 5.500,00  (12.222x)
+    OCTREOTIDA                             (AMPOLA) - 41 registros
+      mín       R$ 35,59 | mediana       R$ 46,85 | máx      R$ 520.000,00  (11.099x)
+    NEBULIZADOR                            (UNIDADE) - 44 registros
+      mín        R$ 7,50 | mediana      R$ 138,13 | máx    R$ 1.439.000,00  (10.418x)
+    CUBA USO HOSPITALAR                    (UNIDADE) - 120 registros
+      mín        R$ 8,60 | mediana       R$ 36,41 | máx      R$ 362.750,00  (9.962x)
+
+
+6. RANKINGS
+--------------------------------------------------------------------------
+
+  Top 10 UF por valor total
+     1. PR                                                    R$ 42.938.927.332,87   37.3%
+     2. SP                                                    R$ 42.745.917.684,73   37.1%
+     3. RS                                                     R$ 6.208.871.088,95    5.4%
+     4. CE                                                     R$ 5.396.969.234,82    4.7%
+     5. RJ                                                     R$ 5.303.513.275,51    4.6%
+     6. SC                                                     R$ 1.940.847.107,01    1.7%
+     7. AL                                                     R$ 1.784.490.741,15    1.6%
+     8. BA                                                     R$ 1.565.931.261,07    1.4%
+     9. ES                                                     R$ 1.366.598.954,81    1.2%
+    10. PB                                                       R$ 858.388.923,54    0.7%
+
+  Top 10 Municípios por valor total
+     1. SAO PAULO                                             R$ 39.107.257.165,89   34.0%
+     2. CURITIBA                                              R$ 28.019.828.705,15   24.4%
+     3. FAZENDA RIO GRANDE                                    R$ 13.466.421.078,44   11.7%
+     4. FORTALEZA                                              R$ 5.349.159.929,60    4.6%
+     5. RIO DE JANEIRO                                         R$ 5.040.180.194,50    4.4%
+     6. PORTO ALEGRE                                           R$ 4.303.699.228,95    3.7%
+     7. FLORIANOPOLIS                                          R$ 1.802.862.321,63    1.6%
+     8. PENEDO                                                 R$ 1.702.674.891,51    1.5%
+     9. SALVADOR                                               R$ 1.509.316.037,61    1.3%
+    10. BARUERI                                                R$ 1.121.400.309,40    1.0%
+
+  Top 10 Instituições compradoras por valor total
+     1. SECRETARIA DE ESTADO DA SAUDE                         R$ 66.185.933.397,85   57.5%
+     2. MUNICIPIO DE FAZENDA RIO GRANDE                       R$ 13.466.421.078,44   11.7%
+     3. SECRETARIA DA SAUDE DO ESTADO DO CEARA                 R$ 5.347.707.049,44    4.6%
+     4. SECRETARIA DE ESTADO DE SAUDE - SES                    R$ 5.040.055.308,34    4.4%
+     5. CONSORCIO PUBLICO DA ASSOCIACAO DOS MUNICIPIOS DA      R$ 3.090.880.354,82    2.7%
+     6. FUNDO MUNICIPAL DE SAUDE                               R$ 2.022.244.044,42    1.8%
+     7. FUNDO ESTADUAL DE SAUDE DO PARANA - FUNSAUDE           R$ 1.698.618.297,45    1.5%
+     8. CONSORCIO INTERMUNICIPAL DO SUL DO ESTADO DE ALAGO     R$ 1.685.250.783,81    1.5%
+     9. FUNDO ESTADUAL DE SAUDE DO ESTADO DA BAHIA             R$ 1.486.730.339,20    1.3%
+    10. CONSORCIO INTERMUNICIPAL CATARINENSE-CIMCATARINA       R$ 1.481.929.991,43    1.3%
+
+  Top 10 Fornecedores por valor total
+     1. AGILLE COMERCIO DE MEDICAMENTOS LTDA                  R$ 22.862.261.354,18   19.9%
+     2. PORTAL LTDA                                           R$ 15.064.798.403,65   13.1%
+     3. MED4 IMPORTADORA E DISTRIBUIDORA LTDA                 R$ 13.357.079.311,77   11.6%
+     4. SP HOSPITALAR LTDA                                     R$ 3.837.039.004,15    3.3%
+     5. ASTRAZENECA DO BRASIL LTDA.                            R$ 3.520.693.865,84    3.1%
+     6. ONCO PROD DISTRIBUIDORA DE PRODUTOS HOSPITALARES E     R$ 3.329.370.573,80    2.9%
+     7. G2 COMERCIO DE MEDICAMENTOS LTDA                       R$ 2.890.725.251,20    2.5%
+     8. NOVARTIS BIOCIENCIAS SA                                R$ 2.753.401.996,66    2.4%
+     9. JANSSEN-CILAG FARMACEUTICA LTDA                        R$ 2.073.704.526,72    1.8%
+    10. ONCOVIT DISTRIBUIDORA DE MEDICAMENTOS LTDA             R$ 1.681.486.997,63    1.5%
+
+  Top 10 Fabricantes por valor total
+     1. MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA.               R$ 22.938.126.847,23   19.9%
+     2. SUN FARMACEUTICA DO BRASIL LTDA                       R$ 15.282.918.728,72   13.3%
+     3. UNICHEM FARMACEUTICA DO BRASIL LTDA.                  R$ 13.503.203.899,91   11.7%
+     4. EUROFARMA LABORATORIOS S.A.                            R$ 5.811.695.055,93    5.1%
+     5. NOVARTIS BIOCIENCIAS SA                                R$ 4.057.682.127,58    3.5%
+     6. ASTRAZENECA DO BRASIL LTDA.                            R$ 3.656.234.694,39    3.2%
+     7. ELI LILLY DO BRASIL LTDA                               R$ 3.299.587.058,16    2.9%
+     8. JANSSEN-CILAG FARMACEUTICA LTDA                        R$ 2.315.523.524,18    2.0%
+     9. AMGEN BIOTECNOLOGIA DO BRASIL LTDA.                    R$ 1.721.729.729,70    1.5%
+    10. SANOFI MEDLEY FARMACEUTICA LTDA                        R$ 1.667.638.451,16    1.4%
+
+  Top 10 Itens por valor total
+     1. PENICILAMINA                                          R$ 22.863.108.461,82   19.9%
+     2. OCTREOTIDA                                            R$ 14.728.916.356,98   12.8%
+     3. AMOXICILINA                                           R$ 14.007.035.017,62   12.2%
+     4. INSULINA                                               R$ 3.813.973.269,33    3.3%
+     5. ÁCIDO ZOLEDRÔNICO                                      R$ 3.735.672.869,58    3.2%
+     6. TEZEPELUMABE                                           R$ 1.669.442.636,11    1.5%
+     7. CARFILZOMIB                                            R$ 1.380.290.896,12    1.2%
+     8. NUSINERSENA                                            R$ 1.271.712.474,89    1.1%
+     9. BUDESONIDA                                             R$ 1.152.368.129,96    1.0%
+    10. DAPAGLIFLOZINA                                         R$ 1.087.125.088,10    0.9%
+
+
+7. EFEITO DOS REGISTROS SUSPEITOS NO RANKING DE UF
+--------------------------------------------------------------------------
+
+       com_tudo_bi  sem_faixa1_bi  queda_%
+sg_uf                                     
+PR           42.94           5.95     86.1
+SP           42.75          22.46     47.5
+RS            6.21           2.42     61.0
+CE            5.40           5.38      0.3
+RJ            5.30           1.45     72.6
+SC            1.94           1.89      2.8
+
+
+8. VALOR x QUANTIDADE - itens nas duas listas: 0
+
+
+9. PERFIL DAS COMPRAS
+--------------------------------------------------------------------------
+
+  ds_esfera
+    ESTADUAL                              R$ 86.123.392.979,52   74.8%      27.816 registros
+    MUNICIPAL                             R$ 28.936.412.098,31   25.1%     339.384 registros
+    FEDERAL                                    R$ 5.250.886,51    0.0%         122 registros
+    PRIVADA                                       R$ 77.131,51    0.0%          43 registros
+
+  tp_compra
+    ADMINISTRATIVA                       R$ 107.572.071.744,02   93.5%     361.364 registros
+    JUDICIAL                               R$ 7.493.061.351,83    6.5%       6.001 registros
+
+  ds_tipo_produto
+    Medicamento                          R$ 111.033.385.187,53   96.5%     290.775 registros
+    Dispositivo medico                     R$ 4.031.747.908,32    3.5%      76.590 registros
+
+  fg_generico
+    Nao generico                          R$ 74.599.663.298,64   64.8%      83.483 registros
+    Generico                              R$ 23.947.280.610,33   20.8%     104.277 registros
+    Nao informado                         R$ 16.518.189.186,87   14.4%     179.605 registros
+
+  ds_modalidade_compra
+    Pregão                               R$ 106.130.502.307,53   92.2%     332.310 registros
+    Registro de Preços                     R$ 6.807.131.674,87    5.9%      18.133 registros
+    Dispensa de Licitação                  R$ 1.916.962.428,15    1.7%      13.612 registros
+    Inexigibilidade de Licitação             R$ 188.530.676,27    0.2%         417 registros
+    Tomada de Preços                          R$ 10.592.943,18    0.0%       1.864 registros
+    Concorrência                               R$ 6.007.919,42    0.0%         710 registros
+
+
+10. COBERTURA GEOGRÁFICA
+--------------------------------------------------------------------------
+  UFs com registro: 24 de 27
+  UFs ausentes ...: ['AM', 'AP', 'DF']
+  Alimentação voluntária: ausência indica não informação, não ausência de compra.
