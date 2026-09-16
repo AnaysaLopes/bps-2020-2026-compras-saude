@@ -1,0 +1,249 @@
+==========================================================================
+SPRINT 1 - MAPEAMENTO DE DISCREPÂNCIAS ENTRE AS BASES ANUAIS DO BPS
+Aluna: Anaysa Pereira Lopes
+==========================================================================
+
+
+1. INVENTÁRIO E ENCODING
+--------------------------------------------------------------------------
+
+2020
+  tamanho descompactado ..: 50.07 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 84.919
+  colunas ................: 36
+  caracteres corrompidos .: 1877
+
+2021
+  tamanho descompactado ..: 50.42 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 85.012
+  colunas ................: 36
+  caracteres corrompidos .: 2124
+
+2022
+  tamanho descompactado ..: 53.22 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 89.546
+  colunas ................: 36
+  caracteres corrompidos .: 2830
+
+2023
+  tamanho descompactado ..: 20.79 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 33.809
+  colunas ................: 36
+  caracteres corrompidos .: 756
+
+2024
+  tamanho descompactado ..: 17.83 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 28.815
+  colunas ................: 36
+  caracteres corrompidos .: 0
+
+2025
+  tamanho descompactado ..: 22.03 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 34.174
+  colunas ................: 36
+  caracteres corrompidos .: 0
+
+2026
+  tamanho descompactado ..: 7.47 MB
+  encoding ...............: utf-8
+  separador ..............: ';'
+  linhas .................: 11.090
+  colunas ................: 36
+  caracteres corrompidos .: 0
+
+
+2. ESTRUTURA DE COLUNAS
+--------------------------------------------------------------------------
+
+Referência (2020), 36 colunas:
+   1. ano_compra
+   2. cnpj_instituicao
+   3. sg_uf
+   4. ds_esfera
+   5. dt_compra
+   6. dt_insercao
+   7. validade_compra
+   8. co_catmat
+   9. ds_item
+  10. co_pdm
+  11. co_grupo
+  12. no_grupo
+  13. co_classe
+  14. no_classe
+  15. fg_generico
+  16. tp_compra
+  17. sg_unidade_medida
+  18. cnpj_fornecedor
+  19. no_fornecedor
+  20. cnpj_fabricante
+  21. no_fabricante
+  22. qt_medicamento
+  23. ds_observacao
+  24. no_instituicao
+  25. no_municipio
+  26. un_medida_capacidade
+  27. no_pdm
+  28. nu_processo_compra
+  29. nu_ata
+  30. un_fornecimento
+  31. registro_anvisa
+  32. modalidade
+  33. vl_capacidade
+  34. vl_preco_unitario
+  35. vl_preco_total
+  36. co_seq_bps
+
+Diferenças em relação à referência:
+  2021: idêntica (nomes, quantidade e ordem)
+  2022: idêntica (nomes, quantidade e ordem)
+  2023: idêntica (nomes, quantidade e ordem)
+  2024: idêntica (nomes, quantidade e ordem)
+  2025: idêntica (nomes, quantidade e ordem)
+  2026: idêntica (nomes, quantidade e ordem)
+
+  Layout estável nos sete anos. A divergência está no conteúdo.
+
+
+3. VALORES NULOS/VAZIOS POR COLUNA E ANO (%)
+--------------------------------------------------------------------------
+
+                      2020  2021  2022  2023  2024  2025  2026
+ano_compra             0.0   0.0   0.0   0.0   0.0   0.0   0.0
+cnpj_instituicao       0.0   0.0   0.0   0.0   0.0   0.0   0.0
+sg_uf                  0.0   0.0   0.0   0.0   0.0   0.0   0.0
+ds_esfera              0.0   0.0   0.0   0.0   0.0   0.0   0.0
+dt_compra              0.0   0.0   0.0   0.0   0.0   0.0   0.0
+dt_insercao            0.0   0.0   0.1   2.2   4.5   0.0   0.0
+validade_compra        0.0   0.0   0.0   0.0   0.0   0.0   0.0
+co_catmat              0.0   0.0   0.0   0.0   0.0   0.0   0.0
+ds_item                0.0   0.0   0.0   0.0   0.0   0.0   0.0
+co_pdm                 0.1   0.1   0.1   0.1   0.1   0.1   0.1
+co_grupo               0.1   0.1   0.1   0.1   0.1   0.1   0.1
+no_grupo               0.1   0.1   0.1   0.1   0.1   0.1   0.1
+co_classe              0.1   0.1   0.1   0.1   0.1   0.1   0.1
+no_classe              0.1   0.1   0.1   0.1   0.1   0.1   0.1
+fg_generico           56.3  53.4  55.0  45.8  34.1  26.7  24.8
+tp_compra              0.0   0.0   0.0   0.0   0.0   0.0   0.0
+sg_unidade_medida     63.0  63.9  64.8  62.2  63.6  63.0  62.7
+cnpj_fornecedor        0.0   0.0   0.0   0.0   0.0   0.0   0.0
+no_fornecedor          0.0   0.0   0.0   0.0   0.0   0.0   0.0
+cnpj_fabricante        0.0   0.0   0.0   0.0   0.0   0.0   0.0
+no_fabricante          0.0   0.0   0.0   0.0   0.0   0.0   0.0
+qt_medicamento         0.0   0.0   0.0   0.0   0.0   0.0   0.0
+ds_observacao          0.0   1.5   2.6  19.9  72.2  62.0  56.0
+no_instituicao         0.0   0.0   0.0   0.1   0.3   0.3   0.7
+no_municipio           0.0   0.0   0.0   0.0   0.0   0.0   0.0
+un_medida_capacidade   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+no_pdm                 0.1   0.1   0.1   0.1   0.1   0.1   0.1
+nu_processo_compra     0.0   0.0   0.0   0.0   0.0   0.0   0.0
+nu_ata                99.3  97.4  96.4  64.3   3.9   4.4   1.9
+un_fornecimento        0.0   0.0   0.0   0.0   0.0   0.0   0.0
+registro_anvisa       56.3  53.4  55.0  45.8  34.1  26.7  24.8
+modalidade             0.0   0.0   0.0   0.0   0.0   0.0   0.0
+vl_capacidade         63.0  63.9  64.8  62.2  63.6  63.0  62.7
+vl_preco_unitario      0.0   0.0   0.0   0.0   0.0   0.0   0.0
+vl_preco_total         0.0   0.0   0.0   0.0   0.0   0.0   0.0
+co_seq_bps             0.0   0.0   0.0   0.0   0.0   0.0   0.0
+
+
+4. REGISTROS DUPLICADOS
+--------------------------------------------------------------------------
+
+Critérios: linha inteira idêntica; chave 'co_seq_bps' repetida.
+
+  2020: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2021: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2022: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2023: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2024: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2025: linhas idênticas=     0 | co_seq_bps repetido=     0
+  2026: linhas idênticas=     0 | co_seq_bps repetido=     0
+
+  Consolidado bruto: 367.365 linhas
+  Linhas idênticas ......: 0
+  co_seq_bps repetido ...: 0
+
+
+5. FORMATOS DE DATA E NÚMERO
+--------------------------------------------------------------------------
+  2020: dt_compra='21/10/2020' | vl_preco_unitario='0.15' | qt_medicamento='50000'
+  2021: dt_compra='22/11/2021' | vl_preco_unitario='7.56' | qt_medicamento='40'
+  2022: dt_compra='04/01/2022' | vl_preco_unitario='0.0899' | qt_medicamento='120000'
+  2023: dt_compra='31/07/2023' | vl_preco_unitario='0.21' | qt_medicamento='100000'
+  2024: dt_compra='15/01/2024' | vl_preco_unitario='0.168' | qt_medicamento='320000'
+  2025: dt_compra='10/03/2025' | vl_preco_unitario='0.48' | qt_medicamento='8000'
+  2026: dt_compra='09/01/2026' | vl_preco_unitario='5029.73' | qt_medicamento='723'
+
+  Datas em DD/MM/AAAA (pt-BR) e decimais com ponto (en-US), no mesmo arquivo.
+
+
+6. DOMÍNIO DOS CAMPOS CATEGÓRICOS
+--------------------------------------------------------------------------
+
+  ds_esfera -> 4 valores distintos
+  ds_esfera
+  MUNICIPAL    339384
+  ESTADUAL      27816
+  FEDERAL         122
+  PRIVADA          43
+
+  modalidade -> 10 valores distintos
+  modalidade
+  Pregão                          332310
+  Registro de Preços               18133
+  Dispensa de Licitação            13612
+  Tomada de Preços                  1864
+  Concorrência                       710
+  Inexigibilidade de Licitação       417
+  Concurso                           194
+  Convite                             70
+  Leilão                              54
+  Diálogo Competitivo                  1
+
+  tp_compra -> 2 valores distintos
+  tp_compra
+  ADMINISTRATIVA    361364
+  JUDICIAL            6001
+
+  fg_generico -> 3 valores distintos
+  fg_generico
+  NaN    179605
+  S      104277
+  N       83483
+
+  sg_uf -> 24 valores distintos
+  sg_uf
+  PR    78925
+  SP    64571
+  RO    37150
+  RS    23917
+  PB    23424
+  PE    19464
+  SE    15551
+  PI    13483
+  PA    13077
+  AL    12359
+
+
+7. CONSISTÊNCIA vl_preco_total = vl_preco_unitario x qt_medicamento
+--------------------------------------------------------------------------
+  Registros comparáveis .: 367.365
+  Registros divergentes .: 0
+
+
+8. VALORES NÃO POSITIVOS
+--------------------------------------------------------------------------
+  qt_medicamento <= 0 ....: 0
+  vl_preco_unitario <= 0 .: 0
