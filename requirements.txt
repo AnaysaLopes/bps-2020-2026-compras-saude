@@ -1,0 +1,10 @@
+# Mini-Projeto Avaliativo - Modulo 2 - Semana 07
+# Aluna: Anaysa Pereira Lopes
+#
+# Instalacao:  pip install -r requirements.txt
+# Execucao:    jupyter notebook notebooks/BPS_20_26_projeto_completo.ipynb
+
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+jupyter>=1.0
