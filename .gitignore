@@ -1,0 +1,27 @@
+# Camadas raw e staging: arquivos originais e intermediários, regenerados
+# pelo notebook a partir da fonte oficial — não fazem sentido versionados.
+dados/raw/*
+!dados/raw/.gitkeep
+dados/staging/*
+!dados/staging/.gitkeep
+
+# Base consolidada: o CSV puro tem ~229 MB (acima do limite do GitHub) e não
+# é versionado. A versão compactada (.csv.gz, ~34 MB) também fica fora da
+# árvore de arquivos porque passa dos 25 MB do upload pelo navegador — ela é
+# distribuída como anexo de uma Release do repositório, não como arquivo
+# commitado (ver seção 12 do README).
+dados/curated/*.csv
+dados/curated/*.csv.gz
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Ambiente virtual
+venv/
+.venv/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
